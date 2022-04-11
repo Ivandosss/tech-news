@@ -1,4 +1,5 @@
 import requests
+import time
 
 
 # Requisito 1
@@ -7,7 +8,9 @@ def fetch(url, timeout=3):
         response = requests.get(url, timeout=timeout)
         response.raise_for_status()
     except (requests.HTTPError, requests.ReadTimeout):
-        return ""
+        return None
+
+    time.sleep(3)
     return response.text
 
 
