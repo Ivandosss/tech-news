@@ -17,6 +17,7 @@ def top_5_news():
         top_5_news.append((new['title'], new['url']))
 
     return top_5_news
+    # Referência: Adriano Monteiro Turma-13-c
 
 
 # Requisito 11
